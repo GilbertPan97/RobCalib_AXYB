@@ -38,12 +38,6 @@ pip install -r requirements.txt
 3. Run 'Calib_AXYB_main.ipynb':
 Before using the code, ensure that you have installed the required dependencies, including PyLMISDP and cvxopt. Then, you can execute the 'Calib_AXYB_main.ipynb' Jupyter Notebook to run the main program.
 
-```
-conda create -n lmiSDP python=3.8
-conda activate lmiSDP
-pip install -r requirements.txt
-```
-
 4. Configuring Matlab LMI solver to call Python interpreter:
 If you plan to use the LMI solver written in Matlab that interacts with Python, you need to make a small adjustment in the 'M_Code/solvers/LMI_AXYB.m' file. Modify the python interpreter path in the following line:
 ```
@@ -62,16 +56,22 @@ The project structure is:
 root/
 │
 ├── M_Code/
-│   ├── 
+│   ├── ExperimentData
+│   ├── sim_solutions
+│   ├── solvers
+│   ├── tmp_Data
+│   ├── util
 │   └── 
 │
 ├── support_funcs/
 │
-├── 
+├── venv (create with pycharm)
 │
-└── 
+├── AXYB_Calibrator.py
+│
+└── Calib_AXYB_test.ipynb
 ```
-
+waiting......
 
 ## Contribution
 

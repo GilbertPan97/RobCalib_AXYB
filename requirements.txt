@@ -1,6 +1,7 @@
-sympy
 numpy
 scipy
+sympy==0.7.4
+jupyter
 PyLMI-SDP==0.2
 cvxopt==1.2.6
 

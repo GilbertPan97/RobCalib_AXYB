@@ -1,6 +1,6 @@
 # RobCalib_AXYB
 
-The repository provides tools for calibrating the hand-eye and hand-target (chessboard)  relationship between an image camera and a robot. The calibration method is inspired by the research paper "Toward Simultaneous Coordinate Calibrations of AX=YB Problem by the LMI-SDP Optimization" and includes various algorithms, such as LMI-SDP method, iterative method, and SVD algorithm.
+This repository provides tools for calibrating the hand-eye and hand-target (chessboard) relationship between an image camera and a robot. The calibration method is inspired by the research paper "Toward Simultaneous Coordinate Calibrations of AX=YB Problem by the LMI-SDP Optimization" and includes various algorithms, such as LMI-SDP method, iterative method, and SVD algorithm.
 
 ## Features
 
@@ -16,8 +16,27 @@ The repository provides tools for calibrating the hand-eye and hand-target (ches
 
 This section describes how to use the project, step by step.
 
-1. Clone the repository to your local machine
-2. Install the dependencies. We recommend using conda to create a new environment with the dependencies installed. For example, create a new conda environment with Python 3.8 installed:
+1. Clone the repository to your local machine:
+To get started with the code, first, you need to clone the repository to your local machine. You can do this using the following command in your terminal or command prompt:
+```
+git clone <repository_url>
+```
+2. Set up Python environment:
+We recommend creating a new Python environment using PyCharm or any other preferred method to manage dependencies. For example, to create a new environment named 'venv' and install the required dependencies, you can use the following commands:
+For pip-based environment (using virtualenv):
+```
+python -m venv venv
+source venv/bin/activate   # On Windows, use "venv\Scripts\activate" instead
+pip install -r requirements.txt
+```
+Alternatively, if you prefer using Anaconda, you can create and activate the environment as follows:
+```
+conda create -n lmiSDP python=3.8
+conda activate lmiSDP
+pip install -r requirements.txt
+```
+3. Run 'Calib_AXYB_main.ipynb':
+Before using the code, ensure that you have installed the required dependencies, including PyLMISDP and cvxopt. Then, you can execute the 'Calib_AXYB_main.ipynb' Jupyter Notebook to run the main program.
 
 ```
 conda create -n lmiSDP python=3.8
@@ -25,9 +44,16 @@ conda activate lmiSDP
 pip install -r requirements.txt
 ```
 
-3. ......
-
-Please note that the repository provides a basic development workflow example. You can extend and customize it to suit your requirements.
+4. Configuring Matlab LMI solver to call Python interpreter:
+If you plan to use the LMI solver written in Matlab that interacts with Python, you need to make a small adjustment in the 'M_Code/solvers/LMI_AXYB.m' file. Modify the python interpreter path in the following line:
+```
+execommand = 'venv/bin/python AXYB_Calibrator.py';
+```
+Replace 'venv/bin/python' with the path to your Python interpreter that has the required dependencies installed. For example:
+```
+execommand = 'C:\path\to\your\python\interpreter\python.exe AXYB_Calibrator.py';
+```
+By making these changes, you should be able to run the code smoothly and utilize the LMI solver integrated with Python in your Matlab environment.
 
 ## Project Structure
 The project structure is:

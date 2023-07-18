@@ -1,6 +1,6 @@
 # RobCalib_AXYB
 
-The repository provides tools for calibrating the hand-eye and hand-target (chessboard)  relationship between an image camera and a robot. The calibration method is inspired by the research paper "Toward Simultaneous Coordinate Calibrations of AX=YB Problem by the LMI-SDP Optimization" and includes various algorithms, such as LMI-SDP method, iterative method, and SVD algorithm.
+This repository provides tools for calibrating the hand-eye and hand-target (chessboard) relationship between an image camera and a robot. The calibration method is inspired by the research paper "Toward Simultaneous Coordinate Calibrations of AX=YB Problem by the LMI-SDP Optimization" and includes various algorithms, such as LMI-SDP method, iterative method, and SVD algorithm.
 
 ## Features
 

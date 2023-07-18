@@ -9,7 +9,6 @@ import pickle
 import sympy
 import numpy
 import time
-import sympybotics
 import lmi_sdp
 
 from lmi_sdp import init_lmi_latex_printing

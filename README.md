@@ -1,16 +1,19 @@
 # RobCalib_AXYB
 
-This repository provides tools for calibrating the hand-eye and hand-target (chessboard) relationship between an image camera and a robot. The calibration method is inspired by the research paper "Toward Simultaneous Coordinate Calibrations of AX=YB Problem by the LMI-SDP Optimization" and includes various algorithms, such as LMI-SDP method, iterative method, and SVD algorithm.
+RobCalib_AXYB is a comprehensive toolbox designed to address the AX=YB calibration problem between a robot (hand) and a camera (eye). In this context, X represents the hand-eye relationship, and Y represents the hand-target relationship. This repository serves as the accompanying code for a research paper, providing essential resources for reproducing the results presented therein.
+
+## Overview
+The calibration problem between a robot and a camera is a fundamental task in robotics and computer vision. The goal is to determine the transformation between the robot's end-effector (hand) and the camera (eye) coordinate systems, as well as the relationship between the robot's base and the target object (hand-target). RobCalib_AXYB offers various solvers to efficiently tackle this complex problem.
 
 ## Features
 
-- **AX**=**YB** calibration between camera and robot (X: hand-eye, Y: hand-target).
-- Several calibration algorithms: 
-  - Kronecker Product and LMI-SDP-Based Algorithm
-  - Iterative Algorithm
-  - DQ-Based Algorithm
+* Multiple Solvers: RobCalib_AXYB includes a range of solvers, such as LMI-SDP, iterative, and dual quaternion algorithms, to cater to different calibration scenarios.
 
-* Comprehensive simulation and experimental validation programs for accurate calibration assessment.
+* MATLAB Implementation: Most of the solvers are implemented using MATLAB, ensuring a user-friendly and well-documented coding environment.
+
+* Python Integration: The core part of the LMI-SDP algorithm is executed in Python, leveraging the PyLMI-SDP library for optimized performance.
+
+* Complete Codebase: The repository contains all the necessary code for simulating and conducting experiments outlined in the associated research paper.
 
 ## Usage Guide
 
@@ -72,6 +75,16 @@ root/
 └── Calib_AXYB_test.ipynb
 ```
 waiting......
+
+## Citation
+
+If you find RobCalib_AXYB helpful in your research or use it in academic projects, we kindly request you to acknowledge its usage by citing our paper:
+
+J. Pan, Z. Fu, H. Yue, X. Lei, M. Li and X. Chen, "Toward Simultaneous Coordinate Calibrations of AX=YB Problem by the LMI-SDP Optimization," in *IEEE Transactions on Automation Science and Engineering*, 2022, [doi: 10.1109/TASE.2022.3207771](https://doi.org/10.1109/TASE.2022.3207771).
+
+## License
+
+RobCalib_AXYB is licensed under the [MIT License](https://opensource.org/licenses/MIT). See the LICENSE file for more details.
 
 ## Contribution
 

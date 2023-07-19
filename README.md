@@ -38,8 +38,8 @@ conda create -n lmiSDP python=3.8
 conda activate lmiSDP
 pip install -r requirements.txt
 ```
-3. Run 'Calib_AXYB_main.ipynb':
-Before using the code, ensure that you have installed the required dependencies, including PyLMISDP and cvxopt. Then, you can execute the 'Calib_AXYB_main.ipynb' Jupyter Notebook to run the main program.
+3. Run 'Calib_AXYB_test.ipynb':
+Before using the code, ensure that you have installed the required dependencies, including PyLMISDP and cvxopt. Then, you can execute the 'Calib_AXYB_test.ipynb' Jupyter Notebook to run the main program.
 
 4. Configuring Matlab LMI solver to call Python interpreter:
 If you plan to use the LMI solver written in Matlab that interacts with Python, you need to make a small adjustment in the 'M_Code/solvers/LMI_AXYB.m' file. Modify the python interpreter path in the following line:
@@ -64,7 +64,10 @@ root/
 │   ├── solvers
 │   ├── tmp_Data
 │   ├── util
-│   └── 
+│   ├── Experimental.m
+│   ├── main_Error_datas.m
+│   ├── main_Error_noise.m
+│   └── plot_main.m
 │
 ├── support_funcs/
 │
@@ -80,7 +83,7 @@ waiting......
 
 If you find RobCalib_AXYB helpful in your research or use it in academic projects, we kindly request you to acknowledge its usage by citing our paper:
 
-J. Pan, Z. Fu, H. Yue, X. Lei, M. Li and X. Chen, "Toward Simultaneous Coordinate Calibrations of AX=YB Problem by the LMI-SDP Optimization," in *IEEE Transactions on Automation Science and Engineering*, 2022, [doi: 10.1109/TASE.2022.3207771](https://doi.org/10.1109/TASE.2022.3207771).
+> J. Pan, Z. Fu, H. Yue, X. Lei, M. Li and X. Chen, "Toward Simultaneous Coordinate Calibrations of AX=YB Problem by the LMI-SDP Optimization," in *IEEE Transactions on Automation Science and Engineering*, 2022, [doi: 10.1109/TASE.2022.3207771](https://doi.org/10.1109/TASE.2022.3207771).
 
 ## License
 
